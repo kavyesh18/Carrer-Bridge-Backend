@@ -22,17 +22,19 @@ public class User {
     private String email;
     private String password;
     private AccountType accountType;
+    private Long profileId;
 
-    // Explicitly define the constructor (this should fix the error)
-    public User(Long id, String name, String email, String password, AccountType accountType) {
+    
+    public User(Long id, String name, String email, String password, AccountType accountType,Long profileId) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.accountType = accountType;
+        this.profileId = profileId;
     }
 
     public UserDTO toDTO() {
-        return new UserDTO(this.id, this.name, this.email, this.password, this.accountType);
+        return new UserDTO(this.id, this.name, this.email, this.password, this.accountType, this.profileId);
     }
 }

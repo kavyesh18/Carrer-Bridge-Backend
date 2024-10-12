@@ -7,8 +7,6 @@ import com.carrerbridge.exception.CarrerBridgeException;
 
 
 
-
-
 public interface UserService {
 	public UserDTO registerUser(UserDTO userDTO) throws CarrerBridgeException;
 

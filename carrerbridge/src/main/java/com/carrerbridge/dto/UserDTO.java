@@ -27,8 +27,10 @@ public class UserDTO {
     private String password;
     
     private AccountType accountType;
+    
+    private Long profileId;
 
-    public UserDTO(Long id, String name, String email, String password, AccountType accountType) {
+    public UserDTO(Long id, String name, String email, String password, AccountType accountType, Long profileId) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -37,6 +39,6 @@ public class UserDTO {
     }
 
     public User toEntity() {
-        return new User(this.id, this.name, this.email, this.password, this.accountType);
+        return new User(this.id, this.name, this.email, this.password, this.accountType, this.profileId);
     }
 }
